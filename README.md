@@ -25,6 +25,7 @@ https://ftp.mozilla.org/pub/mozilla.org/webtools/bugzilla/bugzilla-5.2.tar.gz
 ```bash
 wget https://ftp.mozilla.org/pub/mozilla.org/webtools/bugzilla/bugzilla-5.2.tar.gz
 tar -xzf bugzilla-5.2.tar.gz
+```
 
 ## Deployment Notes
 
@@ -39,5 +40,6 @@ Example:
 podman run -d -p 8080:80 \
   -v /home/tux/bugs.sql:/data/bugs.sql:ro \
   bugzilla52:alma8
+```
 
 
