@@ -16,4 +16,3 @@ RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.n
 # Add the bugzilla source files
 COPY bugzilla-5.2/ /var/www/html/
 
-
