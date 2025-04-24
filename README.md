@@ -29,7 +29,9 @@ tar -xzf bugzilla-5.2.tar.gz
 
 ## Deployment Notes
 
-This project is designed to be built on a system with internet access (e.g., Frodo) and deployed on a separate system such as 'Gandalf' where the Bugzilla SQL database is accessible.
+If you're using the pre-built container image (`bugzilla52-alma8.tar`), you do **not** need to download the Bugzilla 5.2 source separately — it is already included in the image.
+
+This project is designed to be built once on a system with internet access (e.g., Frodo) and deployed on a separate system where the Bugzilla SQL database is accessible.
 
 **Important:** Do not copy the `bugs.sql` file or any production database dumps to Frodo or this GitHub repository.
 
