@@ -13,3 +13,4 @@ RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.n
         wget tar make gcc \
     && dnf clean all
 
+COPY bugzilla-5.2/ /var/www/html/
