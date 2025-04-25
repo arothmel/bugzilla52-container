@@ -44,4 +44,17 @@ podman run -d -p 8080:80 \
   bugzilla52:alma8
 ```
 
+## More notes
+
+### Important: Apache Startup
+
+Starting from image version alma8 (build April 25, 2025), Apache is configured to start automatically inside the container using the CMD instruction.
+You do not need to manually launch Apache unless using an older image.
+
+If you are using an earlier version of the container and see a blank or test page, you can manually start Apache inside the container with:
+
+```
+podman exec -it <container_name> bash
+/usr/sbin/httpd -DFOREGROUND
+```
 
