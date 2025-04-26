@@ -16,6 +16,22 @@ RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.n
 # Add the bugzilla source files
 COPY bugzilla-5.2/ /var/www/html/
 
+
+# Install cpanm
+RUN curl -L https://cpanmin.us -o /usr/local/bin/cpanm && \
+    chmod +x /usr/local/bin/cpanm
+
+# Install key Perl modules
+RUN /usr/local/bin/cpanm \
+    Email::Sender \
+    Email::MIME \
+    Template::Toolkit \
+    DBD::MariaDB \
+    DateTime \
+    GD \
+    Time::HiRes || true
+
+
 EXPOSE 80
 
 CMD ["/usr/sbin/httpd", "-DFOREGROUND"]

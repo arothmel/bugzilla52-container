@@ -3,3 +3,4 @@
 bugzilla-5.2/
 *.tar.gz
 *.pub
+cpanm
